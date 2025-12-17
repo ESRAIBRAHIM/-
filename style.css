@@ -1,0 +1,334 @@
+/* reset all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body stuff */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f5f5f5;
+    color: #444;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header and footer full width */
+header,
+footer {
+    width: 100%;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* header stuff */
+header {
+    background: #fff;
+    border-bottom: 3px solid #2f5d50;
+}
+
+header>div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #2f5d50;
+}
+
+header h1 span {
+    font-style: italic;
+    color: #d35400;
+}
+
+header p {
+    font-size: .9rem;
+    color: #666;
+}
+
+/* nav menu */
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background: #2f5d50;
+    color: #fff;
+}
+
+/* sections */
+section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+section>div {
+    flex: 1;
+}
+
+section h1,
+section h2 {
+    color: #2f5d50;
+    margin-bottom: 10px;
+}
+
+section h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* images & video */
+section figure {
+    flex: 1;
+    min-width: 350px;
+    max-width: 400px;
+}
+
+body.Home section figure img,
+body.works section.gallery figure img,
+body.about section:nth-of-type(2) figure video {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    font-size: .85rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* table stuff */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background: #2f5d50;
+    color: #fff;
+}
+
+/* contact page */
+body.contact section {
+    display: block;
+}
+
+body.contact form,
+body.contact .contact-info {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+body.contact fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+body.contact legend {
+    font-weight: bold;
+    color: #2f5d50;
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+
+body.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2f5d50;
+}
+
+body.contact input,
+body.contact select,
+body.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: .95rem;
+    transition: border-color .3s;
+}
+
+body.contact input:focus,
+body.contact select:focus,
+body.contact textarea:focus {
+    outline: none;
+    border-color: #2f5d50;
+    box-shadow: 0 0 0 2px rgba(47, 93, 80, .1);
+}
+
+body.contact .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+body.contact .checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+body.contact button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background: #2f5d50;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color .3s;
+}
+
+body.contact button:hover {
+    background: #244a3f;
+}
+
+body.contact .contact-info h3 {
+    color: #2f5d50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+body.contact .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.contact .contact-info li {
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+body.contact .contact-info li:last-child {
+    border-bottom: none;
+}
+
+body.contact .contact-info a {
+    color: #d35400;
+    text-decoration: none;
+}
+
+body.contact .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* footer */
+footer {
+    background: #fff;
+    border-top: 2px solid #2f5d50;
+    text-align: center;
+    font-size: .9rem;
+    width: 100%;
+}
+
+footer>div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* responsive stuff */
+@media (max-width:768px) {
+    header>div {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    section figure,
+    section figure img,
+    section figure video {
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.contact form,
+    body.contact .contact-info {
+        padding: 15px;
+    }
+}
+
+@media (max-width:480px) {
+
+    main,
+    section,
+    header>div,
+    footer>div {
+        padding: 15px;
+    }
+}
