@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحتي التعريفية</title>
+    <style>
+         /* تنسيق الجسم العام */
+        body{
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8e7 ;
+            margin: 0;
+            padding: 0; 
+        }
+        /*تنسيق رأس الصفحة*/
+        header{
+             background-color:#fde08ab0;
+             text-align: center;
+             padding: 20px;
+             border-radius: 30px;
+        }
+        header h1{
+        font-family: 'Courier New', Courier, monospace;
+         color: #3a2e25;
+        }
+        header p{
+            font-size: 18px;
+        }
+        header span{
+            font-weight: bold;
+        }
+        /*تنسيق شريط التنقل السريع*/
+        nav{
+            background-color:#a3714d ;
+           display: flex;
+           align-items: center;
+           margin: 20px 0;
+           object-fit: cover;
+        }
+        nav ul{
+            list-style: none;
+            display:flex;
+            gap: 35px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 25px;
+            color: #fff8e7;
+        }
+        /*قسم التعريف*/
+       h2{
+            border-right:3px solid #3a2e25 ;
+            color: #7e5538;
+            padding: 10px;
+            margin: 30px;
+        }
+         #about p{
+         padding: 20px;
+        margin: 10px ;
+        border: 1px solid  #7e5538;
+         }
+         /*قسم المهارات */
+        #skills ul{
+        padding: 20px;
+        margin: 10px ;
+        border: 1px solid  #7e5538;
+    }
+    /*معرض الأعمال*/
+    #portfolio{
+          padding: 20px;
+        margin: 10px ;
+        border: 1px solid  #7e5538;
+    }
+    .gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+     .card {
+        width: 300px ;
+        border: 2px solid  #7e5538;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid  #7e5538;
+    }
+     .card button {
+        padding: 5px 10px;
+        background-color:#fde08ad7 ;
+        color: #3a2e25;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        border: none;
+    }
+     /* الجدول */
+     table {
+        width: 70%;
+        border-collapse: collapse;
+    }
+    thead{
+    background-color: #a3714d;
+    font-weight: bold;
+    text-align: center;
+    }
+    th,td{
+        text-align: center;
+        padding: 10px;
+         border: 1px solid  #7e5538;
+    }
+     /* النموذج */
+      #contact form{
+        background-color: #a3714d85;
+        width: 20%;
+        margin: 10px;
+        padding:40px;
+        border: 2px solid #3a2e25;
+         margin-bottom: 15px;
+     }
+     label{
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+     }
+      input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #3a2e25;
+    }
+    button{
+        background-color: #fde08ad7;
+         border: none;
+        cursor: pointer;
+        color: #3a2e25;
+        padding: 10px 15px;
+       border-radius:25px;
+        font-weight: bold;
+    }
+/*التذييل*/
+ footer {
+        background-color:#fde08ad7;
+        color:#3a2e25;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+     /* استخدام z-index و float */
+    nav {
+        position: relative;
+        z-index: 2;
+    }
+
+    header {
+        position: relative;
+        z-index: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <!--رأس الصفحة-->
+    <header>
+        <h1>رحلتي في تعلم تصميم المواقع</h1>
+        <p>هنا سأتحدث عن <span>البدايات</span> و طرقي في التعلم.</p>
+        <q>تعلم كتابة البرامج يوسع مداركك ويساعدك على التفكير بشكل أفضل. إنه يخلق طريقة للتفكير أراها مفيدة في جميع المجالات.</q> <br><span>بيل غيتس</span>
+        </header>
+        <!--شريط التنقل السريع-->
+        <nav>
+            <ul>
+                <li><a href="#about">من أنا</a></li>
+                <li><a href="#skills">المهارات</a></li>
+                <li><a href="#portfolio">معرض الأعمال</a></li>
+                <li><a href="#table">جدول الأعمال</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </nav>
+        <!--قسم تعريف باستخدام Article-->
+        <article id="about">
+            <h2>من أنا؟:</h2>
+            <p>اسمي رتاج أحمد جلوال,طالبة في كلية تقنية المعلومات,أتعلم تصميم المواقع بخطوات
+                 بسيطة و مستمرة, كانت بداياتي قبل التعلم الأكاديمي و بدأت التعلم من منصة و من شروحات الانترنت.</p>
+            </article>
+        <!--قسم المهارات باستخدام قائمة-->
+        <section id="skills">
+            <h2>المهارات التقنية:</h2>
+            <ul>
+                <li>الرسم ال3D</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>البرمجة بلغة C++</li>
+            </ul>
+        </section>
+        <!--معرض الأعمال-->
+        <section id="portfolio">
+            <h2>معرض الأعمال:</h2>
+            <div class="gallery">
+                <div class="card">
+                     <img src="صور\Screenshot_6.png" alt="المشروع الاول">
+                    <h3>المشروع الأول </h3>
+                    <button>عرض المشروع</button>
+                </div>
+
+                <div class="card">
+                    <img src="صور\Screenshot_7.png" alt="المشروع الثاني">
+                    <h3>مشروعي الثاني</h3>
+                    <button>عرض المشروع</button>
+                </div>
+
+                <div class="card">
+                   <img src="صور/Screenshot_2.png" alt="الواجهة">
+                   <img src="صور/Screenshot_3.png" alt="القائمة">
+                   <img src="صور/Screenshot_4.png" alt="النموذج">
+                    <h3>مشروعي الثالث</h3>
+                    <button>عرض المشروع</button>
+                </div>
+            </div>
+        <p>يمكنك رؤية أعمالي في :</p>
+        <ul>
+        <li><a href="https://github.com/retajstudent" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/retajstudent" target="_blank" >LinkedIn</a></li>
+        </ul>    
+        </section>
+
+    <!--جدول يوضح طريقة دراستي لأي مشرع أقوم بتصميمه-->
+    <section id="table">
+        <h2>جدول الأعمال لهذاالأسبوع:</h2>
+        <table >
+            <thead>
+                <tr>
+                    <th>اليوم</th>
+                    <th>المهمة</th>
+                    <th>الوقت المستغرق</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>الأحد</td>
+                    <td>كتابة الفكرة و التخطيط</td>
+                    <td>2 ساعات</td>
+                </tr>
+                <tr>
+                    <td>الإثنين</td>
+                    <td>تعلم أساسيات HTML</td>
+                    <td>2 ساعات</td>
+                </tr>
+                <tr>
+                    <td>الثلاثاء</td>
+                    <td>بناء هيكل صفحة HTML</td>
+                    <td>3 ساعات</td>
+                </tr>
+                 <tr>
+                    <td>الأربعاء</td>
+                    <td>مراجعة أساسيات CSS</td>
+                    <td>2 ساعات</td>
+                </tr>
+                 <tr>
+                    <td>الخميس</td>
+                    <td>تصميم وتنسيق الصفحة بـ CSS</td>
+                    <td>3 ساعات</td>
+                </tr>
+                 <tr>
+                    <td>الجمعة</td>
+                    <td>إنشاء نموذج "اتصل بي"</td>
+                    <td>1 ساعة</td>
+                </tr>
+                 <tr>
+                    <td>السبت</td>
+                    <td>تحسين  التصميم و مراجعته</td>
+                    <td>2  ساعات</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--نموذج تواصل يحتوي على form و button-->
+    <section id="contact"> 
+        <h2>للتواصل معي عبر:</h2>
+       <form>
+            <label>الاسم</label>
+            <input type="text" name="name">
+            <br>
+            <label>البريد الإلكتروني</label>
+            <input type="email" name="Email">
+            <br>
+            <label>رقم الهاتف</label>
+            <input type="text" name="your phone_number">
+            <label>تاريخ الميلاد</label>
+            <input type="date" name="your birthday">
+            <button type="submit">ارسال</button>
+      </form>
+             <p>أو  يمكنك التواصل معي عبر البريد الإلكتروني أو عبر رقم الهاتف:</p>
+        <ul>
+            <li><a href="mailto:retajahmed@gmail.com">retajahmed@gmail.com</a></li>
+            <li>رقم الهاتف:1234567 092</li>
+        </ul>
+    </section> 
+        <!--التذييل--> 
+        <footer >
+        <p>&copy; 2025 حقوق النشر| كل الحقوق محفوظة ل رتاج أحمد</p>
+    </footer>
+  
+</body>
+</html>
